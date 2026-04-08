@@ -5,11 +5,33 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+  <!-- Upload Box -->
   <div class="card">
     <h2>Upload CSV</h2>
     <input type="file" id="fileInput">
     <button onclick="uploadFile()">Analyze</button>
-    <pre id="output" style="text-align:left; max-height:300px; overflow:auto;"></pre>
+  </div>
+
+  <!-- Main Layout -->
+  <div class="container">
+
+    <!-- LEFT: CSV Preview -->
+    <div class="left-panel">
+      <h3>CSV Preview</h3>
+      <div id="csvTable"></div>
+    </div>
+
+    <!-- RIGHT: Insights -->
+    <div class="right-panel">
+      <h3>Insights</h3>
+      <div id="insightsTable"></div>
+
+      <button onclick="copyJSON()">Copy JSON</button>
+
+      <pre id="output"></pre>
+    </div>
+
   </div>
 
   <script src="app.js"></script>
